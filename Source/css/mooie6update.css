@@ -1,34 +1,18 @@
 div#activebar-container{
-	border-bottom: 1px solid rgb(102, 102, 102); 
-	padding: 4px; 
 	background: #ffffe1;
-	display: block; 
-	position: fixed; 
-	z-index: 9999; 
-	top: 0px; 
-	left: 0px; 
-	cursor: default; 
-	font-size: 9px; 
+	border-bottom: 1px solid rgb(102, 102, 102); 
 	color: rgb(0, 0, 0); 
+	cursor: default; 
+	display: block; 
+	font-size: 9px; 
+	left: 0px; 
+	padding: 4px; 
+	position: fixed;
+	top: 0px; 
 	width: 100%;
+	z-index: 9999; 
 }
-div#activebar-container .icon{
-	margin: 0pt 4px 0pt 0pt; 
-	padding: 0pt; 
-	float: left; 
-	width: 16px; 
-	height: 16px;
-}
-
-div#activebar-container .close{
-	margin: 0pt 5px 0pt 0pt; 
-	float: right; 
-	width: 16px; 
-	height: 16px;
-}
-div#activebar-container .content{
-	margin: 0px 8px; 
-	padding-top: 1px; 
-	font-family: Bitstream Vera Sans,verdana,sans-serif; 
-	font-size: 11px;
-}
+div#activebar-container .icon, div#activebar-container .close {height:16px; margin:0 4px; padding: 0;  width:16px; }
+div#activebar-container .icon { background-position:17px 0; float: left; }
+div#activebar-container .close {background-position: 0 0;   float: right; }
+div#activebar-container .content {font-family: Bitstream Vera Sans,verdana,sans-serif; font-size: 11px; margin: 0px 8px; padding-top: 1px; }

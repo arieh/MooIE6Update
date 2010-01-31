@@ -17,7 +17,7 @@ provides: [IE6Update]
 
 var IE6Update = new Class({
 	Implements : [Options],
-	containerHTML : "<div class='icon'><img class='normal' src=''/></div><div class='close'><img class='normal' src=''/></div><div class='content'><div>Internet Explorer is missing updates required to view this site. Click here to update... </div></div>",
+	containerHTML : "<div class='icon'></div><div class='close'></div><div class='content'><div>Internet Explorer is missing updates required to view this site. Click here to update... </div></div>",
 	options :{
 		img_folder : 'images/'
 	},
@@ -25,28 +25,26 @@ var IE6Update = new Class({
 		this.setOptions(options);
 		this.container = new Element('div',{id:'activebar-container'}).set('html',this.containerHTML);
 		
-		var icon = this.container.getElements('.icon').getElements('img')[0],
-			close = this.container.getElements('.close').getElements('img')[0],
-			container=this.container,
-			img_folder = this.options.img_folder;
+		var icon = this.container.getElements('.icon'),
+			close = this.container.getElements('.close'),
+			container=this.container;
+		icon.setStyle('background-image','url('+this.options.img_folder+'sprites.png)');
+		close.setStyle('background-image','url('+this.options.img_folder+'sprites.png)');
 		
-		icon.set('src',this.options.img_folder+'icon.png');
-		
-		close.set('src',this.options.img_folder+'close.png')
-			.addEvent('click',function(e){
+		close.addEvent('click',function(e){
 				container.destroy();
-				e.stopPropagation();
-			});
+				e.stop();
+		});
 			
 		this.container.addEvents({
 			'mouseover': function(){
-				icon.set('src',img_folder+'icon-over.png');
-				close.set('src',img_folder+'close-over.png');
+				icon.setStyle('background-position','17px 16px');
+				close.setStyle('background-position','0 16px');
 				this.setStyle('background-color','#3399ff');
 			},
 			'mouseout':function(){
-				icon.set('src',img_folder+'icon.png');
-				close.set('src',img_folder+'close.png');
+				icon.setStyle('background-position','17px 0');
+				close.setStyle('background-position','0 0');
 				this.setStyle('background-color','#ffffe1');
 			},
 			'click':function(){window.location.href = 'http://www.microsoft.com/windows/internet-explorer/default.aspx';}
