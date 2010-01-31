@@ -9,7 +9,7 @@ div#activebar-container{
 	padding: 4px; 
 	position: absolute;
 	top: 0px; 
-	width: auto;
+	width: 100%;
 	z-index: 9999; 
 }
 div#activebar-container .icon, div#activebar-container .close {height:16px; margin:0 4px; padding: 0;  width:16px; }
