@@ -1,7 +1,9 @@
 var IE6Update = new Class({
 	Implements : [Options],
 	containerHTML : "<div class='icon'><img class='normal' src=''/></div><div class='close'><img class='normal' src=''/></div><div class='content'><div>Internet Explorer is missing updates required to view this site. Click here to update... </div></div>",
-	options :{img_folder : 'images/',css_folder:'css/'},
+	options :{
+		img_folder : 'images/'
+	},
 	initialize : function(options){
 		this.setOptions(options);
 		this.container = new Element('div',{id:'activebar-container'}).set('html',this.containerHTML);
@@ -10,9 +12,7 @@ var IE6Update = new Class({
 			close = this.container.getElements('.close').getElements('img')[0],
 			container=this.container,
 			containerHeight = this.container.getSize().y,
-			link = new Element('link',{'rel':'stylesheet','type':'text/css','href':this.options.css_folder+'mooie6update.css'}),
 			img_folder = this.options.img_folder;
-		$$('head')[0].adopt(link);
 		
 		icon.set('src',this.options.img_folder+'icon.png');
 		
