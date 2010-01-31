@@ -10,24 +10,28 @@ authors:
 requires:
 - core/1.2.4: [Class, Class.Extras, Element.Dimensions]
 
-provides: [IE6Update]
+provides: [IENotification]
 
 ...
 */
-
-var IE6Update = new Class({
+var IENotification = new Class({
 	Implements : [Options],
-	containerHTML : "<div class='icon'></div><div class='close'></div><p>Internet Explorer is missing updates required to view this site. Click here to update... </p>",
+	containerHTML : "<div class='icon'></div><div class='close'></div><p></p>",
 	options :{
-		img_folder : 'images/'
+		img_folder : 'images/',
+		text : '',
+		url : ''
 	},
 	initialize : function(options){
 		this.setOptions(options);
+	
 		this.container = new Element('div',{id:'activebar-container'}).set('html',this.containerHTML);
+		this.container.getElement('p').appendText(this.options.text);
 		
 		var icon = this.container.getElements('.icon'),
 			close = this.container.getElements('.close'),
-			container = this.container;
+			container = this.container,
+			url = this.options.url;
 		
 		icon.setStyle('background-image','url('+this.options.img_folder+'sprites.png)');
 		close.setStyle('background-image','url('+this.options.img_folder+'sprites.png)');
@@ -48,7 +52,7 @@ var IE6Update = new Class({
 				close.setStyle('background-position','0 0');
 				this.setStyle('background-color','#ffffe1');
 			},
-			'click':function(){window.location.href = 'http://www.microsoft.com/windows/internet-explorer/default.aspx';}
+			'click':function(){window.location.href = url;}
 		})
 		.setStyles({'overflow':'hidden','height':0});
 			
@@ -59,5 +63,7 @@ var IE6Update = new Class({
 });
 
 function createIE6UpdateBanner(options){
-	return  new IE6Update(options || {});
+	options = options || {};
+	options.text = options.text || "Internet Explorer is missing updates required to view this site. Click here to update... ";
+	return  new IENotification(options || {});
 }
