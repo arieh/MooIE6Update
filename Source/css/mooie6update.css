@@ -1,0 +1,34 @@
+div#activebar-container{
+	border-bottom: 1px solid rgb(102, 102, 102); 
+	padding: 4px; 
+	background: #ffffe1;
+	display: block; 
+	position: fixed; 
+	z-index: 9999; 
+	top: 0px; 
+	left: 0px; 
+	cursor: default; 
+	font-size: 9px; 
+	color: rgb(0, 0, 0); 
+	width: 100%;
+}
+div#activebar-container .icon{
+	margin: 0pt 4px 0pt 0pt; 
+	padding: 0pt; 
+	float: left; 
+	width: 16px; 
+	height: 16px;
+}
+
+div#activebar-container .close{
+	margin: 0pt 5px 0pt 0pt; 
+	float: right; 
+	width: 16px; 
+	height: 16px;
+}
+div#activebar-container .content{
+	margin: 0px 8px; 
+	padding-top: 1px; 
+	font-family: Bitstream Vera Sans,verdana,sans-serif; 
+	font-size: 11px;
+}
