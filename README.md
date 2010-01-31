@@ -24,7 +24,7 @@ To use this file, siply add these snippets:
 		});
 	</script>
 
-The default folder for the images is `images/`. If you pust them in another place you need to point to it via the `img_folder` option.
+_The default folder for the sprite-image is `images/`. If you put it in another location you need to point to it via the `img_folder` option._
 
 
 #### With conditional comments:
