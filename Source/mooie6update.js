@@ -39,4 +39,7 @@ var IE6Update = new Class({
 		this.container.tween('height',16);
 	}
 });
-	
+
+function createIE6UpdateBanner(options){
+	return  new IE6Update(options || {});
+}
