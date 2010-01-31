@@ -65,5 +65,5 @@ var IENotifier = new Class({
 function createIE6UpdateBanner(options){
 	options = options || {};
 	options.text = options.text || "Internet Explorer is missing updates required to view this site. Click here to update... ";
-	return  new IENotification(options || {});
+	return  new IENotifier(options || {});
 }
