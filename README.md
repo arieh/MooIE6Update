@@ -9,13 +9,20 @@ How to use
 To use this file, siply add these snippets:
 
 	#HTML
-	<!-- In The HEAD section /--> 
+	<!-- In The HEAD section/--> 
 	<!--[if lte IE 6]>
+	
+	#HTML
 	<link rel='stylesheet' type='text/css' href='mooie6update.css' />
-	<![endif]-->
 
+	#HTML
+	<![endif]-->
+	
+	#HTML
 	<!-- With all you other js files /-->
 	<!--[if lte IE 6]>
+	
+	#HTML
 	<script type='text/javascript' src='mooie6update.js'></script>
 	<script type='text/javascript'>
 		window.addEvent('domready',function(){
@@ -24,6 +31,8 @@ To use this file, siply add these snippets:
 			});
 		});
 	</script>
+	
+	#HTML
 	<![endif]-->
 
 
