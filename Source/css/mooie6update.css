@@ -15,4 +15,4 @@ div#activebar-container{
 div#activebar-container .icon, div#activebar-container .close {height:16px; margin:0 4px; padding: 0;  width:16px; }
 div#activebar-container .icon { background-position:17px 0; float: left; }
 div#activebar-container .close {background-position: 0 0;   float: right; }
-div#activebar-container .content {font-family: Bitstream Vera Sans,verdana,sans-serif; font-size: 11px; margin: 0px 8px; padding-top: 1px; }
+div#activebar-container p {font-family: Bitstream Vera Sans,verdana,sans-serif; font-size: 11px; margin: 0px 8px; padding-top: 1px; }
