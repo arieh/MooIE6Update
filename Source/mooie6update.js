@@ -8,7 +8,7 @@ authors:
 - Arieh Glazer
 
 requires:
-- core/1.2.4: [Class,Class.Extras,Element.Dimensions]
+- core/1.2.4: [Class, Class.Extras, Element.Dimensions]
 
 provides: [IE6Update]
 
@@ -27,13 +27,14 @@ var IE6Update = new Class({
 		
 		var icon = this.container.getElements('.icon'),
 			close = this.container.getElements('.close'),
-			container=this.container;
+			container = this.container;
+		
 		icon.setStyle('background-image','url('+this.options.img_folder+'sprites.png)');
 		close.setStyle('background-image','url('+this.options.img_folder+'sprites.png)');
 		
 		close.addEvent('click',function(e){
-				container.destroy();
-				e.stop();
+			container.destroy();
+			e.stop();
 		});
 			
 		this.container.addEvents({
@@ -51,7 +52,8 @@ var IE6Update = new Class({
 		})
 		.setStyles({'overflow':'hidden','height':0});
 			
-		$$('body')[0].adopt(this.container);
+		this.container.inject(document.body);
+		
 		this.container.tween('height',16);
 	}
 });
