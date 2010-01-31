@@ -10,11 +10,11 @@ authors:
 requires:
 - core/1.2.4: [Class, Class.Extras, Element.Dimensions]
 
-provides: [IENotification]
+provides: [IENotifier]
 
 ...
 */
-var IENotification = new Class({
+var IENotifier = new Class({
 	Implements : [Options],
 	containerHTML : "<div class='icon'></div><div class='close'></div><p></p>",
 	options :{
