@@ -17,7 +17,7 @@ provides: [IE6Update]
 
 var IE6Update = new Class({
 	Implements : [Options],
-	containerHTML : "<div class='icon'></div><div class='close'></div><p><p>Internet Explorer is missing updates required to view this site. Click here to update... </p>",
+	containerHTML : "<p>Internet Explorer is missing updates required to view this site. Click here to update... </p><div class='icon'></div><div class='close'></div>",
 	options :{
 		img_folder : 'images/'
 	},
