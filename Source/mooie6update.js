@@ -10,7 +10,7 @@ authors:
 requires:
 - core/1.2.4: [Class,Class.Extras,Element.Dimensions]
 
-provides: [HashListener]
+provides: [IE6Update]
 
 ...
 */
