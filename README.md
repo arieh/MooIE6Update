@@ -9,20 +9,12 @@ How to use
 To use this file, siply add these snippets:
 
 	#HTML
-	<!-- In The HEAD section/--> 
-	<!--[if lte IE 6]>
-	
-	#HTML
-	<link rel='stylesheet' type='text/css' href='mooie6update.css' />
+	<!-- In The HEAD section /--> 
 
-	#HTML
-	<![endif]-->
+	<link rel='stylesheet' type='text/css' href='mooie6update.css' />
 	
-	#HTML
 	<!-- With all you other js files /-->
-	<!--[if lte IE 6]>
-	
-	#HTML
+
 	<script type='text/javascript' src='mooie6update.js'></script>
 	<script type='text/javascript'>
 		window.addEvent('domready',function(){
@@ -31,9 +23,13 @@ To use this file, siply add these snippets:
 			});
 		});
 	</script>
-	
-	#HTML
-	<![endif]-->
-
 
 The default folder for the images is `images/`. If you pust them in another place you need to point to it via the `img_folder` option.
+
+
+#### With conditional comments:
+
+	#HTML
+	<!--[if lte IE 6]><link rel='stylesheet' type='text/css' href='mooie6update.css' /><![endif]-->
+	
+	<!--[if lte IE 6]><script type='text/javascript' src='mooie6update.js'></script><script type='text/javascript'>window.addEvent('domready',function(){createIE6UpdateBanner();});</script><![endif]-->
