@@ -29,30 +29,11 @@ IENotifier Method: constructor {#IENotifier:constructor}
 		img_folder : 'assets/images/'
 	});
 
-
 IENotifier: Events {#IENotifier:events)
 -----------------
  * open : Fires when bar is opened. Passes the bar's container as parameter.
  * close : Fires when bar is closed. Passes the bar's container as parameter.
- 
 
-IENotifier Method: Show {#IENotifier:show}
----------------------------------	
-Shows the notification bar
-
-### Syntax
-
-	notifier.show();
-
-
-IENotifier Method: Hide {#IENotifier:hide}
----------------------------------	
-Hides the notification bar
-
-### Syntax
-
-	notifier.hide();
- 
 IENotifier: createIE6UpdateBanner {#IENotifier:createIE6UpdateBanner}
 -------------------------------
 Creates an IE6-update notifier.
