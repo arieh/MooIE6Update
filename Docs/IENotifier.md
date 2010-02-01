@@ -37,6 +37,14 @@ Shows the notification bar
 
 	notifier.show();
 	
+IENotifier Method: Hide {#IENotifier:hide}
+-------------------------
+Hides the notification bar
+
+### Syntax
+
+	notifier.hide();
+	
 IENotifier: Events {#IENotifier:events)
 -----------------
  * open : Fires when bar is opened. Passes the bar's container as parameter.
