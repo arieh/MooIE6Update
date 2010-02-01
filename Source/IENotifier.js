@@ -1,6 +1,6 @@
 /*
 ---
-description: This class is a simple port to the JQuery plugin ie6-update (http://ie6update.com)
+description: This class supplies an interface to create IE-notification-like bar
 
 license: MIT-style
 
@@ -10,7 +10,7 @@ authors:
 requires:
 - core/1.2.4: [Class, Class.Extras, Element.Dimensions]
 
-provides: [IENotifier]
+provides: [IENotifier, IE6UpdateNotifier]
 
 ...
 */
@@ -58,10 +58,16 @@ var IENotifier = new Class({
 	}
 });
 
+
+var IE6UpdateNotifier = new Class({
+	Extends : IENotifier,
+	options : {
+		text : "Internet Explorer is missing updates required to view this site. Click here to update... ",
+		url : "http://www.microsoft.com/windows/internet-explorer/default.aspx",
+		show : true
+	}
+});
+
 function createIE6UpdateBanner(options){
-	options = options || {};
-	options.text = options.text || "Internet Explorer is missing updates required to view this site. Click here to update... ";
-	options.url  = options.url  || "http://www.microsoft.com/windows/internet-explorer/default.aspx";
-	options.show = options.show || true;
-	return  new IENotifier(options || {});
+	return  new IE6UpdateNotifier(options || {});
 }

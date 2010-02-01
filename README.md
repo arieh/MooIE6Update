@@ -21,7 +21,7 @@ For the IE6 updae notification, simply add these snippets:
 	
 	<!-- With all you other js files /-->
 
-	<script type='text/javascript' src='mooie6update.js'></script>
+	<script type='text/javascript' src='IENotifier.js'></script>
 	<script type='text/javascript'>
 		window.addEvent('domready',function(){
 			createIE6UpdateBanner({
@@ -38,7 +38,7 @@ _The default folder for the sprite-image is `images/`. If you put it in another 
 	#HTML
 	<!--[if lte IE 6]><link rel='stylesheet' type='text/css' href='mooie6update.css' /><![endif]-->
 	
-	<!--[if lte IE 6]><script type='text/javascript' src='mooie6update.js'></script><script type='text/javascript'>window.addEvent('domready',function(){createIE6UpdateBanner();});</script><![endif]-->
+	<!--[if lte IE 6]><script type='text/javascript' src='IENotifier.js'></script><script type='text/javascript'>window.addEvent('domready',function(){createIE6UpdateBanner();});</script><![endif]-->
 	
 ### IENotifier Usage:
 
