@@ -29,16 +29,20 @@ IENotifier Method: constructor {#IENotifier:constructor}
 		img_folder : 'assets/images/'
 	});
 
+
 IENotifier Method: Show {#IENotifier:show}
 ---------------------------------	
+
 Shows the notification bar
 
 ### Syntax
 
 	notifier.show()
 		
+
 IENotifier Method: Hide {#IENotifier:hide}
 ---------------------------------	
+	
 Hides the notification bar
 
 ### Syntax
