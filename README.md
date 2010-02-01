@@ -1,6 +1,7 @@
 MooIE6Update
 ============
 This plugin started as a simple port to the JQuery plugin ie6-update (http://ie6update.com). At it's simplest use it will create an update notification similar to the IE notification bar, which will prompt IE6 users to update their browsers to a newer version.
+
 BUT, as I started refactoring the class, I eventualy found myself creating a more generic IENotifier class, which lets you create whatever message you would like with this class.
 
 ![Screenshot](http://github.com/arieh/MooIE6Update/raw/master/screenshot.png)
