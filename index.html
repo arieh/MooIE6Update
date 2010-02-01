@@ -13,10 +13,10 @@
 <h2>A mootools port to the <a href='http://ie6update.com'>IE6Update JQuery plugin</a></h2>
 <p><em>Note - this demo page loads the banner for all browsers. In order to load it to IE6 only, use conditional comments</em></p>
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js'></script>
-<script type='text/javascript' src='http://github.com/arieh/MooIE6Update/raw/master/Source/mooie6update.js'></script>
+<script type='text/javascript' src='http://github.com/arieh/MooIE6Update/raw/master/Source/IENotifier.js.js'></script>
 <script type='text/javascript'>
 window.addEvent('domready',function(){
-	createIE6UpdateBanner({img_folder:'http://github.com/arieh/MooIE6Update/raw/master/Source/images/'});
+	var ie6notification = createIE6UpdateBanner({img_folder:'http://github.com/arieh/MooIE6Update/raw/master/Source/images/'});
 });
 </script>
 </body>
