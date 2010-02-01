@@ -5,10 +5,11 @@ BUT, as I started refactoring the class, I eventualy found myself creating a mor
 
 ![Screenshot](http://github.com/arieh/MooIE6Update/raw/master/screenshot.png)
 
+
 How to use
 -----------
 
-## IE6 Update Notifier:
+### IE6 Update Notifier:
 
 For the IE6 updae notification, simply add these snippets:
 
@@ -38,7 +39,7 @@ _The default folder for the sprite-image is `images/`. If you put it in another 
 	
 	<!--[if lte IE 6]><script type='text/javascript' src='mooie6update.js'></script><script type='text/javascript'>window.addEvent('domready',function(){createIE6UpdateBanner();});</script><![endif]-->
 	
-## IENotifier Usage:
+### IENotifier Usage:
 
 	#JS
 	var notifier = new IENotifier({
