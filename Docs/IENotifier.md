@@ -30,6 +30,12 @@ IENotifier Method: constructor {#IENotifier:constructor}
 	});
 
 
+IENotifier: Events {#IENotifier:events)
+-----------------
+ * open : Fires when bar is opened. Passes the bar's container as parameter.
+ * close : Fires when bar is closed. Passes the bar's container as parameter.
+ 
+
 IENotifier Method: Show {#IENotifier:show}
 ---------------------------------	
 Shows the notification bar
@@ -46,12 +52,6 @@ Hides the notification bar
 ### Syntax
 
 	notifier.hide();
-
-
-IENotifier: Events {#IENotifier:events)
------------------
- * open : Fires when bar is opened. Passes the bar's container as parameter.
- * close : Fires when bar is closed. Passes the bar's container as parameter.
  
 IENotifier: createIE6UpdateBanner {#IENotifier:createIE6UpdateBanner}
 -------------------------------
