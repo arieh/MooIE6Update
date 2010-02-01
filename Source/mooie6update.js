@@ -15,55 +15,51 @@ provides: [IENotifier]
 ...
 */
 var IENotifier = new Class({
-	Implements : [Options],
+	Implements : [Options,Events],
 	containerHTML : "<div class='icon'></div><div class='close'></div><p></p>",
 	options :{
 		img_folder : 'images/',
 		text : '',
-		url : ''
+		url : '#'
 	},
 	initialize : function(options){
 		this.setOptions(options);
 	
-		this.container = new Element('div',{id:'activebar-container'}).set('html',this.containerHTML);
+		this.container = new Element('a',{id:'activebar-container',href:this.options.url}).set('html',this.containerHTML);
 		this.container.getElement('p').appendText(this.options.text);
 		
 		var icon = this.container.getElements('.icon'),
 			close = this.container.getElements('.close'),
 			container = this.container,
-			url = this.options.url;
+			url = this.options.url,
+			self = this;
 		
 		icon.setStyle('background-image','url('+this.options.img_folder+'sprites.png)');
 		close.setStyle('background-image','url('+this.options.img_folder+'sprites.png)');
 		
 		close.addEvent('click',function(e){
-			container.destroy();
+			this.hide();
 			e.stop();
 		});
 			
-		this.container.addEvents({
-			'mouseover': function(){
-				icon.setStyle('background-position','17px 16px');
-				close.setStyle('background-position','0 16px');
-				this.setStyle('background-color','#3399ff');
-			},
-			'mouseout':function(){
-				icon.setStyle('background-position','17px 0');
-				close.setStyle('background-position','0 0');
-				this.setStyle('background-color','#ffffe1');
-			},
-			'click':function(){window.location.href = url;}
-		})
-		.setStyles({'overflow':'hidden','height':0});
-			
 		this.container.inject(document.body);
 		
+		this.show();
+	},
+	toElement : function(){ return this.container; },
+	show : function(){
 		this.container.tween('height',16);
+		this.fireEvent('open',this.toElement());
+	},
+	hide : function(){
+		this.container.tween('height',0);
+		this.fireEvent('close',this.toElement());
 	}
 });
 
 function createIE6UpdateBanner(options){
 	options = options || {};
 	options.text = options.text || "Internet Explorer is missing updates required to view this site. Click here to update... ";
+	options.url = options.url || "http://www.microsoft.com/windows/internet-explorer/default.aspx";
 	return  new IENotifier(options || {});
 }
