@@ -29,6 +29,14 @@ IENotifier Method: constructor {#IENotifier:constructor}
 		img_folder : 'assets/images/'
 	});
 
+IENotifier Method: Show {#IENotifier:show}
+---------------------
+Shows the notification bar
+
+### Syntax
+
+	notifier.show();
+	
 IENotifier: Events {#IENotifier:events)
 -----------------
  * open : Fires when bar is opened. Passes the bar's container as parameter.
