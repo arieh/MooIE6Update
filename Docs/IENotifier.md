@@ -32,22 +32,21 @@ IENotifier Method: constructor {#IENotifier:constructor}
 
 IENotifier Method: Show {#IENotifier:show}
 ---------------------------------	
-
 Shows the notification bar
 
 ### Syntax
 
-	notifier.show()
-		
+	notifier.show();
+
 
 IENotifier Method: Hide {#IENotifier:hide}
 ---------------------------------	
-	
 Hides the notification bar
 
 ### Syntax
 
-	notifier.hide()
+	notifier.hide();
+
 
 IENotifier: Events {#IENotifier:events)
 -----------------
