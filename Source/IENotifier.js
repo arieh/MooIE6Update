@@ -53,6 +53,7 @@ var IENotifier = new Class({
 		this.fireEvent('open',this.toElement());
 	},
 	hide : function(){
+		this.container.set('tween',{'onComplete':function(){this.setStyle('display','none');}.bind(this.container)});
 		this.container.tween('height',0);
 		this.fireEvent('close',this.toElement());
 	}
