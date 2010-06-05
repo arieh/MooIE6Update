@@ -17,7 +17,7 @@ For the IE6 updae notification, simply add these snippets:
 	#HTML
 	<!-- In The HEAD section /--> 
 
-	<link rel='stylesheet' type='text/css' href='mooie6update.css' />
+	<link rel='stylesheet' type='text/css' href='IENotifier.css' />
 	
 	<!-- With all you other js files /-->
 
