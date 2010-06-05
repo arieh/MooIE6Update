@@ -27,7 +27,7 @@ var IENotifier = new Class({
 	initialize : function(options){
 		this.setOptions(options);
 	
-		this.container = new Element('a',{id:'activebar-container', href:this.options.url}).set('html',this.containerHTML);
+		this.container = new Element('a',{'class':'activebar-container', href:this.options.url}).set('html',this.containerHTML);
 		this.container.adopt(new Element('p',{html:this.options.text}));
 		
 		var icon = this.container.getElements('.icon'),

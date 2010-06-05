@@ -1,4 +1,4 @@
-a#activebar-container{
+.activebar-container{
 	background: #ffffe1;
 	border-bottom: 1px solid rgb(102, 102, 102); 
 	color: rgb(0, 0, 0); 
@@ -16,7 +16,7 @@ a#activebar-container{
 	z-index: 9999;
 	direction:ltr; 
 }
-a#activebar-container .icon, a#activebar-container .close {height:16px; margin:0 4px; padding: 0;  width:16px; }
-a#activebar-container .icon  { float: left; }
-a#activebar-container .close {float: right; }
-a#activebar-container p {font-family: Bitstream Vera Sans,verdana,sans-serif; font-size: 11px; margin: 0px 8px; padding-top: 1px; }
+.activebar-container .icon, .activebar-container .close {height:16px; margin:0 4px; padding: 0;  width:16px; }
+.activebar-container .icon  { float: left; }
+.activebar-container .close {float: right; }
+.activebar-container p {font-family: Bitstream Vera Sans,verdana,sans-serif; font-size: 11px; margin: 0px 8px; padding-top: 1px; }

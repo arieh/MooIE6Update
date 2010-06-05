@@ -36,17 +36,19 @@ _The default folder for the sprite-image is `images/`. If you put it in another 
 #### With conditional comments:
 
 	#HTML
-	<!--[if lte IE 6]><link rel='stylesheet' type='text/css' href='mooie6update.css' /><![endif]-->
+	<!--[if lte IE 7]><link rel='stylesheet' type='text/css' href='IENotifier.css' /><![endif]-->
 	
-	<!--[if lte IE 6]><script type='text/javascript' src='IENotifier.js'></script><script type='text/javascript'>window.addEvent('domready',function(){createIE6UpdateBanner();});</script><![endif]-->
+	<!--[if lte IE 7]><script type='text/javascript' src='IENotifier.js'></script><script type='text/javascript'>window.addEvent('domready',function(){createIE6UpdateBanner();});</script><![endif]-->
 	
 ### IENotifier Usage:
 
 	#JS
 	var notifier = new IENotifier({
-		text : 'some notfication about ie beeing a lame browser',
-		url : 'http://getfirefox.com',
-		img_folder : 'assets/images/'
+		text : 'some notfication about ie beeing a lame browser'
+		,url : 'http://getfirefox.com'
+		,img_folder : 'assets/images/'
+		,rtl :true
+		,show:false
 	});
 	
 	notifier.show();
