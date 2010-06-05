@@ -19,6 +19,7 @@ IENotifier Method: constructor {#IENotifier:constructor}
  * text (`string`) : What message to put in the notifier.
  * url (`string`) : What url to point to on click.
  * show (`bool`) : Whethter or not to show the bar on creation. (default is `false`)
+ * rtl (`bool`) : Whether to use a right-to-left version of the bar
 
 ### Example:
 	
