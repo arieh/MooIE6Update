@@ -6,7 +6,7 @@
 <head>
 	<title>Mootools IE6 Update Page</title>
 	<meta http-equiv="Content-Type" content="text/html; charset='UTF-8'" />
-	<link rel='stylesheet' type='text/css' href='http://github.com/arieh/MooIE6Update/raw/master/Source/css/mooie6update.css' />
+	<link rel='stylesheet' type='text/css' href='http://github.com/arieh/MooIE6Update/raw/master/Source/css/IENotifier.css' />
 </head>
 <body>
 <h1>Mootools IE6 Update Page</h1>
@@ -14,9 +14,10 @@
 <p><em>Note - this demo page loads the banner for all browsers. In order to load it to IE6 only, use conditional comments</em></p>
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js'></script>
 <script type='text/javascript' src='http://github.com/arieh/MooIE6Update/raw/master/Source/IENotifier.js'></script>
+<script type='text/javascript' src='Assets.js'></script>
 <script type='text/javascript'>
 window.addEvent('domready',function(){
-	var ie6notification = createIE6UpdateBanner({img_folder:'http://github.com/arieh/MooIE6Update/raw/master/Source/images/'});
+	createIE6UpdateBanner({img_folder:'http://github.com/arieh/MooIE6Update/raw/master/Source/images/'});
 });
 </script>
 </body>
